@@ -1,0 +1,79 @@
+/* ========================================
+   Brown Math Problem Callout
+   Inspired by IMO/math note styling
+   ======================================== */
+
+/* Main callout container */
+.callout[data-callout="problem"],
+.callout[data-callout="imo"],
+.callout[data-callout="math-problem"] {
+  --callout-color: 160, 120, 80;
+  --callout-bg-color: rgba(160, 120, 80, 0.12);
+  background-color: var(--callout-bg-color);
+  border-left: 4px solid rgb(var(--callout-color));
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin: 16px 0;
+}
+
+/* Callout title bar */
+.callout[data-callout="problem"] .callout-title,
+.callout[data-callout="imo"] .callout-title,
+.callout[data-callout="math-problem"] .callout-title {
+  color: #d4a76a;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 1.05em;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(160, 120, 80, 0.3);
+  margin-bottom: 12px;
+}
+
+/* Callout icon */
+.callout[data-callout="problem"] .callout-icon,
+.callout[data-callout="imo"] .callout-icon,
+.callout[data-callout="math-problem"] .callout-icon {
+  color: #d4a76a;
+}
+
+/* Callout content */
+.callout[data-callout="problem"] .callout-content,
+.callout[data-callout="imo"] .callout-content,
+.callout[data-callout="math-problem"] .callout-content {
+  color: var(--text-normal);
+  font-size: 1em;
+  line-height: 1.7;
+}
+
+/* Math inside callout */
+.callout[data-callout="problem"] .MathJax,
+.callout[data-callout="imo"] .MathJax,
+.callout[data-callout="math-problem"] .MathJax {
+  color: #e8d5b7;
+}
+
+/* Fold/unfold button */
+.callout[data-callout="problem"] .callout-fold,
+.callout[data-callout="imo"] .callout-fold,
+.callout[data-callout="math-problem"] .callout-fold {
+  color: #d4a76a;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.callout[data-callout="problem"] .callout-fold:hover,
+.callout[data-callout="imo"] .callout-fold:hover,
+.callout[data-callout="math-problem"] .callout-fold:hover {
+  opacity: 1;
+}
+
+/* ========================================
+   Dark Theme Adjustments (Optional)
+   ======================================== */
+
+/* Warmer dark background for math notes */
+.theme-dark {
+  --background-primary: #1e1e1e;
+  --background-secondary: #252525;
+  --text-normal: #d4d4d4;
+}
